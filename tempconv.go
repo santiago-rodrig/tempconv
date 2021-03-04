@@ -1,11 +1,23 @@
 // Package tempconv performs Celsius and Fahrenheit temperature computations.
 package tempconv
 
+import "fmt"
+
 // Celsius temperature scale
 type Celsius float64
 
+// Celsius.String returns a string representation of the Celsius type
+func (c Celsius) String() string {
+	return fmt.Sprintf("%g°C", c)
+}
+
 // Fahrenheit temperature scale
 type Fahrenheit float64
+
+// Fahrenheit.String returns a string representation of the Fahrenheit type
+func (f Fahrenheit) String() string {
+	return fmt.Sprintf("%g°F", f)
+}
 
 const (
 	// AbsoluteZeroC is the absolute zero for the Celsius temperature scale
